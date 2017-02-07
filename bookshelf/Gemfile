@@ -56,3 +56,6 @@ gem 'forgery'
 
 #Use 'nifty-generators'
 gem "nifty-generators", :group => :development
+
+#Apparently, coffee-script-source 1.9 and above dont work on windows
+gem 'coffee-script-source', '1.8.0'
