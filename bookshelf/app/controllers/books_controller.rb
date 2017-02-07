@@ -3,4 +3,8 @@ class BooksController < ApplicationController
 	def index
 		@books = Book.paginate(page: params[:page], per_page: 10) # instance variables are prefixed with an @. If we said books = Book.all, we wouldn't be able to access books in the template
 	end
+	
+	def show
+		@book = Book.find params[:id]
+	end
 end
