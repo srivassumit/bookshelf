@@ -53,3 +53,6 @@ gem 'will_paginate', '~> 3.0.4'
 
 #Use 'forgery' gem
 gem 'forgery'
+
+#Use 'nifty-generators'
+gem "nifty-generators", :group => :development
