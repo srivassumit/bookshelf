@@ -6,6 +6,6 @@ class BooksController < ApplicationController
 	
 	def show
 		@book = Book.find params[:id]
-		@comments = @book.comments
+		@comments = @book.comments.paginate(page: params[:page], per_page: 10, order: 'created_at ASC')
 	end
 end
