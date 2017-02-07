@@ -10,3 +10,14 @@
 	   <p><strong><%=h(comment.author) %></strong>: <%=h(comment.text) %>
 	<% end %>
 <% end %>
+
+<h3>Pst Your Comment</h3>
+<% form_for([@book, Comment.new]) do |form| %>
+	<p><%=form.label :author %></p>
+	<p><%=form.text_field :author %></p>
+	
+	<p><%=form.label :text %></p>
+	<p><%=form.text_area :text %></p>
+	
+	<%=form.submit 'Save' %>
+<% end %>
